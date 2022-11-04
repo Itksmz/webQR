@@ -1,0 +1,23 @@
+﻿@model IEnumerable<NguyenVanPhuocHoa.Models.HocPhan>
+@{
+    ViewBag.Title = "ListHP";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>DANH SÁCH HỌC PHẦN</h2>
+<table class="table">
+    <tr>
+        <th> Mã Học Phần </th>
+        <th> Tên Học Phần </th>
+        <th> Số Tín Chỉ </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.MaHP)</td>
+            <td>@Html.DisplayFor(modelItem => item.TenHP)</td>
+            <td>@Html.DisplayFor(modelItem => item.SoTinChi)</td>
+            <td><input type="submit" value="Đăng Ký" claas="btn btn-success"></td>
+        </tr>
+    }
+</table>
+
